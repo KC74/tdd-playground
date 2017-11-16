@@ -29,4 +29,22 @@ describe("stringCompression", () => {
       expect(result).toEqual("a2b1c2a1b2c1");
     });
   });
+
+  describe("when string is null", () => {
+    it("should return error", () => {
+      expect(() => stringCompression(null)).toThrow();
+    });
+  });
+
+  describe("when string is empty", () => {
+    it("should return error", () => {
+      expect(() => stringCompression("")).toThrow();
+    });
+  });
+
+  describe("when input is not a string", () => {
+    it("should return error", () => {
+      expect(() => stringCompression(9)).toThrow();
+    });
+  });
 });
