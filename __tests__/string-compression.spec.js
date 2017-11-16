@@ -21,4 +21,11 @@ describe("stringCompression", () => {
       expect(result).toEqual("a2b1c2a1b2c1");
     });
   });
+
+  describe("when string is aabccabbc", () => {
+    it("should return a2b1c2a1b2c1", () => {
+      const result = stringCompression("aab ccabbc");
+      expect(result).toEqual("a2b1c2a1b2c1");
+    });
+  });
 });
