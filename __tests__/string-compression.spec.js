@@ -22,9 +22,10 @@ describe("stringCompression", () => {
     });
   });
 
-  describe("when string is aabccabbc", () => {
+  describe("when string is aab cca bbc", () => {
     it("should return a2b1c2a1b2c1", () => {
-      const result = stringCompression("aab ccabbc");
+      const result = stringCompression(` aabc cab 
+      bc `);
       expect(result).toEqual("a2b1c2a1b2c1");
     });
   });
